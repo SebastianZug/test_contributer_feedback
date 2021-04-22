@@ -1,2 +1,5 @@
-# test_contributer_feedback
-Evaluates different team feadbacks
+# Evaluate different formats of contributor feedback
+
+## Shields
+
+https://img.shields.io/github/contributors/SebastianZug/test_contributer_feedback
