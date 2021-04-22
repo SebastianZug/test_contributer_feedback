@@ -26,3 +26,16 @@ jobs:
       # Prepare python environment
       - name: Install github2pandas
         run: pip install github2pandas
+
+      - uses: FranzDiebold/github-env-vars-action@v2
+      - name: Print environment variables
+        run: |
+          echo "CI_REPOSITORY_OWNER=$CI_REPOSITORY_OWNER"
+          echo "CI_REPOSITORY_NAME=$CI_REPOSITORY_NAME"
+
+#      - name: Run tests
+#        env:
+#          TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#        run: |
+ #         cd src
+  #        python3 extract.py
