@@ -60,9 +60,9 @@ if __name__ == "__main__":
         print(df['lines_sum'])
         if len(df.lines_sum) == 1:
             print("done")
-            df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', ax = ax)
-        #else:
-        #    df.lines_sum.plot(drawstyle="steps-mid", linewidth = 2, ax = ax)
+            df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', ax = ax, zorder=10)
+        else:
+            df.lines_sum.plot(drawstyle="steps-mid", linewidth = 1, ax = ax)
 
     ax.legend(users.anonym_uuid.values)
     ax.set_xlabel("Date")
