@@ -7,13 +7,11 @@
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/SebastianZug/test_contributor_feedback) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SebastianZug/test_contributor_feedback)
 
 ## Text and Tables
-
 | author                  |   total_added_lines |   total_removed_lines |
 |:------------------------|--------------------:|----------------------:|
-| can-expect-late-month   |                 235 |                    67 |
+| can-expect-late-month   |                 240 |                    75 |
 | open-young-friend-night |                   3 |                     0 |
-| say-will-likely-office  |                  23 |                    26 |
-
+| say-will-likely-office  |                  25 |                    28 |
 ## Diagrams
 
 ![Bild](./statistics/AddedlinesOfCode.png)
