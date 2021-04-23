@@ -1,7 +1,6 @@
 from github2pandas.utility import Utility
 from github2pandas.version import Version
 from pathlib import Path
-from datetime import datetime, timedelta
 import os
 from tabulate import tabulate
 import pandas as pd
@@ -67,6 +66,7 @@ if __name__ == "__main__":
     ax.set_xlabel("Date")
     ax.set_ylabel('Added Lines of Code')
     print(pdFileEdits.commited_at.min())
-    ax.set_xlim(pdFileEdits.commited_at.min(), pdFileEdits.commited_at.max()+ datetime.timedelta(days=1))
+    ax.set_xlim(pdFileEdits.commited_at.min().dt.date, 
+                (pdFileEdits.commited_at.max()+ pd.Timedelta("1 days")).dt.date)
     plt.tight_layout()
     fig.savefig(imagefilename)
