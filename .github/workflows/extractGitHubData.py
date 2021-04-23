@@ -12,6 +12,9 @@ git_repo_owner = os.environ['CI_REPOSITORY_OWNER']
     
 default_data_folder = Path("data", git_repo_name)
 
+imagefilename = "AddedlinesOfCode.png"
+readmefilename = "README.md"
+
 def replaceTextBetween(originalText, delimeterA, delimterB, replacementText):
     leadingText = originalText.split(delimeterA)[0]
     trailingText = originalText.split(delimterB)[1]
@@ -37,15 +40,20 @@ if __name__ == "__main__":
     pdEdits = Version.get_version(data_root_dir=default_data_folder, filename=Version.VERSION_EDITS)
 
     pdEdits = pdEdits.merge(pdCommits[['commit_sha', 'author', 'commited_at']], left_on='commit_sha', right_on='commit_sha')
-    pdFileEdits = pdEdits.groupby(['commit_sha']).first()
-    counts = pdFileEdits.groupby(['author']).agg({'total_added_lines': 'sum', 'total_removed_lines': 'sum'})
     
     # Generate Table 
-    # todo
-        
+    pdFileEdits = pdEdits.groupby(['commit_sha']).first()
+    counts = pdFileEdits.groupby(['author']).agg({'total_added_lines': 'sum', 'total_removed_lines': 'sum'})
+    print(counts.to_markdown())
+    with open(readmefilename, 'r') as filehandle:
+        filecontent = filehandle.read()
+    newfilecontent = replaceTextBetween(filecontent, "## Text and Tables", "## Diagrams", counts.to_markdown())
+    with open(readmefilename) as filehandle:
+        filehandle.write(newfilecontent)
+    print(newfilecontent)
+    
     # Generate Figure 
     fig, ax = plt.subplots()
-    filename = "AddedlinesOfCode"
     for user in users.anonym_uuid.values:
         df = getDataToPlot(pdFileEdits, user)
         df.lines_sum.plot(drawstyle="steps-mid", linewidth = 2, ax = ax)
@@ -54,5 +62,4 @@ if __name__ == "__main__":
     ax.set_xlabel("Date")
     ax.set_ylabel('Added Lines of Code')
     plt.tight_layout()
-    fig.savefig(filename+".png")
-    print("File saved to " + filename + ".png")
+    fig.savefig(imagefilename)
