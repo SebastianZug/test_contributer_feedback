@@ -67,8 +67,8 @@ if __name__ == "__main__":
     ax.set_ylabel('Added Lines of Code')
     print(type(pdFileEdits.commited_at.min()))
     print(pdFileEdits.commited_at.max()+ pd.Timedelta("1 days"))
-    print((pdFileEdits.commited_at.max()+ pd.Timedelta("1 days")).date)
-    ax.set_xlim(pdFileEdits.commited_at.min().date, 
-                (pdFileEdits.commited_at.max()+ pd.Timedelta("1 days")).date)
+    print((pdFileEdits.commited_at.max()+ pd.Timedelta("1 days")))
+    ax.set_xlim(pdFileEdits.commited_at.min(), 
+                (pdFileEdits.commited_at.max()+ pd.Timedelta("1 days")))
     plt.tight_layout()
     fig.savefig(imagefilename)
