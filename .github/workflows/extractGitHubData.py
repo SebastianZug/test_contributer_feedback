@@ -59,8 +59,7 @@ if __name__ == "__main__":
         df = getDataToPlot(pdFileEdits, user)
         print(df['lines_sum'])
         if len(df.lines_sum) == 1:
-            df.reset_index().columns
-            df.reset_index().plot.scatter(x = 'index', y = 'lines_sum')
+            df.reset_index().plot.scatter(x = 'day', y = 'lines_sum')
         else:
             df.lines_sum.plot(drawstyle="steps-mid", linewidth = 2, ax = ax)
 
