@@ -16,4 +16,9 @@
 
 ## Diagrams
 
-## ??
+![Bild](./statistics/AddedlinesOfCode.png)
+
+# Task description
+
+You are a C# developer and a customer ...
+
