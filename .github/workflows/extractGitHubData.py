@@ -47,7 +47,8 @@ if __name__ == "__main__":
     print(counts.to_markdown())
     with open(readmefilename, 'r') as filehandle:
         filecontent = filehandle.read()
-    newfilecontent = replaceTextBetween(filecontent, "## Text and Tables", "## Diagrams", counts.to_markdown())
+    newfilecontent = replaceTextBetween(filecontent, "## Text and Tables", "## Diagrams",
+                                        '\n' + counts.to_markdown() + '\n')
     with open(readmefilename, 'w') as filehandle:
         filehandle.write(newfilecontent)
     print(newfilecontent)
