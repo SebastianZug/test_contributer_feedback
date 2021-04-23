@@ -57,9 +57,7 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     for user in users.anonym_uuid.values:
         df = getDataToPlot(pdFileEdits, user)
-        print(df['lines_sum'])
         if len(df.lines_sum) == 1:
-            print("done")
             df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', ax = ax, zorder=10)
         else:
             df.lines_sum.plot(drawstyle="steps-mid", linewidth = 1, ax = ax)
@@ -67,5 +65,7 @@ if __name__ == "__main__":
     ax.legend(users.anonym_uuid.values)
     ax.set_xlabel("Date")
     ax.set_ylabel('Added Lines of Code')
+    print(pdFileEdits.commited_at.min())
+    ax.set_xlim(pdFileEdits.commited_at.min(), pdFileEdits.commited_at.max()+ datetime.timedelta(days=1))
     plt.tight_layout()
     fig.savefig(imagefilename)
