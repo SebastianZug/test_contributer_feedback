@@ -57,7 +57,7 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     for user in users.anonym_uuid.values:
         df = getDataToPlot(pdFileEdits, user)
-        df.lines_sum.plot(drawstyle="steps-mid", linewidth = 2, ax = ax)
+        df.lines_sum.plot(drawstyle="steps-mid", marker='s', linewidth = 2, ax = ax)
 
     ax.legend(users.anonym_uuid.values)
     ax.set_xlabel("Date")
