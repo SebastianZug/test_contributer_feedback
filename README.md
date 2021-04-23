@@ -14,9 +14,9 @@
 ## Text and Tables
 | author                  |   total_added_lines |   total_removed_lines |
 |:------------------------|--------------------:|----------------------:|
-| can-expect-late-month   |                 203 |                    44 |
+| can-expect-late-month   |                 206 |                    46 |
 | open-young-friend-night |                   3 |                     0 |
-| say-will-likely-office  |                   6 |                     8 |
+| say-will-likely-office  |                  11 |                    12 |
 ## Diagrams
 
 ![Bild](./statistics/AddedlinesOfCode.png)
@@ -24,4 +24,3 @@
 # Task description
 
 You are a C# developer and a customer ...
-
