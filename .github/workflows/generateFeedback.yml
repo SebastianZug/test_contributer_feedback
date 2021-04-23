@@ -51,14 +51,12 @@ jobs:
              mkdir data
              cp .github/workflows/extractGitHubData.py .
              python3 extractGitHubData.py
-             ls -all
-             mv AddedlinesOfCode.png ./statistics/AddedlinesOfCode.png
-
+         
       - name: Commit files
         run: |
              git config --local user.email "action@github.com"
              git config --local user.name "GitHub Action"
-             mv *.png statistics/
+             mv *.png ./statistics/
              git add ./statistics/*.png
              git status
              git commit -m "Add new statistics" -a
