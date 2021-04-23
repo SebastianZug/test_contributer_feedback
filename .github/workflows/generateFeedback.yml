@@ -52,4 +52,4 @@ jobs:
              cp .github/workflows/extractGitHubData.py .
              python3 extractGitHubData.py
              ls -all
-             mv AddedlinesOfCode.png /statistics/AddedlinesOfCode.png
+             mv AddedlinesOfCode.png ./statistics/AddedlinesOfCode.png
