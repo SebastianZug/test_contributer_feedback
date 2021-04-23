@@ -14,9 +14,9 @@
 ## Text and Tables
 | author                  |   total_added_lines |   total_removed_lines |
 |:------------------------|--------------------:|----------------------:|
-| can-expect-late-month   |                 221 |                    56 |
+| can-expect-late-month   |                 235 |                    67 |
 | open-young-friend-night |                   3 |                     0 |
-| say-will-likely-office  |                  21 |                    24 |
+| say-will-likely-office  |                  23 |                    26 |
 ## Diagrams
 
 ![Bild](./statistics/AddedlinesOfCode.png)
