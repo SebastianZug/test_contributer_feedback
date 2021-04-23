@@ -23,9 +23,16 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
 
-      # Prepare python environment
+      # Install github2pandas
       - name: Install github2pandas
         run: pip install github2pandas
+
+      # Install python packages
+      - name: Install dependencies
+        run: |
+             python -m pip install --upgrade pip
+             pip install matplotlib
+             pip install tabulate
 
       # Checkout repository
       - name: Check out current repository
@@ -34,12 +41,14 @@ jobs:
       - uses: FranzDiebold/github-env-vars-action@v2
       - name: Print environment variables
         run: |
-          echo "CI_REPOSITORY_OWNER=$CI_REPOSITORY_OWNER"
-          echo "CI_REPOSITORY_NAME=$CI_REPOSITORY_NAME"
+             echo "CI_REPOSITORY_OWNER=$CI_REPOSITORY_OWNER"
+             echo "CI_REPOSITORY_NAME=$CI_REPOSITORY_NAME"
 
       - name: Run extraction
         env:
-           TOKEN: ${{ secrets.GITHUB_TOKEN }}
+             TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-           mkdir data
-           python3 .github/workflows/extractGitHubData.py 
+             mkdir data
+             cp .github/workflows/extractGitHubData.py .
+             python3 extractGitHubData.py
+             mv AddedlinesOfCode.png /statistics/AddedlinesOfCode.png
