@@ -1,6 +1,7 @@
 from github2pandas.utility import Utility
 from github2pandas.version import Version
 from pathlib import Path
+from datetime import datetime, timedelta
 import os
 from tabulate import tabulate
 import pandas as pd
