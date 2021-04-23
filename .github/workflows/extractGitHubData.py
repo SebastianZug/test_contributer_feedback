@@ -58,8 +58,10 @@ if __name__ == "__main__":
     for user in users.anonym_uuid.values:
         df = getDataToPlot(pdFileEdits, user)
         print(df['lines_sum'])
-        print(len(df.lines_sum))
-        df.lines_sum.plot(drawstyle="steps-mid", marker='s', linewidth = 2, ax = ax)
+        if len(df.lines_sum) == 1:
+            df.reset_index().plot.scatter(x = 'index', y = 'lines_sum')
+        else:
+            df.lines_sum.plot(drawstyle="steps-mid", linewidth = 2, ax = ax)
 
     ax.legend(users.anonym_uuid.values)
     ax.set_xlabel("Date")
