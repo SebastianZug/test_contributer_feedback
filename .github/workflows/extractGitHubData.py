@@ -57,6 +57,8 @@ if __name__ == "__main__":
     fig, ax = plt.subplots()
     for user in users.anonym_uuid.values:
         df = getDataToPlot(pdFileEdits, user)
+        print(df['lines_sum'])
+        print(len(df.lines_sum))
         df.lines_sum.plot(drawstyle="steps-mid", marker='s', linewidth = 2, ax = ax)
 
     ax.legend(users.anonym_uuid.values)
