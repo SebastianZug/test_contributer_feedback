@@ -65,7 +65,9 @@ if __name__ == "__main__":
     ax.legend(users.anonym_uuid.values)
     ax.set_xlabel("Date")
     ax.set_ylabel('Added Lines of Code')
-    print(pdFileEdits.commited_at.min())
+    print(pdFileEdits.commited_at.min().date)
+    print(pdFileEdits.commited_at.max()+ pd.Timedelta("1 days"))
+    print((pdFileEdits.commited_at.max()+ pd.Timedelta("1 days")).date)
     ax.set_xlim(pdFileEdits.commited_at.min().date, 
                 (pdFileEdits.commited_at.max()+ pd.Timedelta("1 days")).date)
     plt.tight_layout()
