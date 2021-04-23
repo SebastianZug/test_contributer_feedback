@@ -11,10 +11,10 @@
 | Zahl der Pull Requests | ![GitHub pull requests](https://img.shields.io/github/issues-pr/SebastianZug/test_contributor_feedback)|
 | Zahl der offenen Pull Requests | ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SebastianZug/test_contributor_feedback)|
 
-## Text and Tables
-
-
-## Diagrams
+## Text and Tables| author                 |   total_added_lines |   total_removed_lines |
+|:-----------------------|--------------------:|----------------------:|
+| can-expect-late-month  |                 201 |                    43 |
+| say-will-likely-office |                   0 |                     0 |## Diagrams
 
 ![Bild](./statistics/AddedlinesOfCode.png)
 
