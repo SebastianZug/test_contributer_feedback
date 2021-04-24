@@ -1,5 +1,7 @@
 # Evaluate different formats of contributor feedback
 
+In this repository, different formats of feedback for teams of students are evaluated. 
+
 ## Shields
 
 ![GitHub contributors](https://img.shields.io/github/contributors/SebastianZug/test_contributor_feedback) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/SebastianZug/test_contributor_feedback)
@@ -18,4 +20,5 @@
 
 # Task description
 
-You are a C# developer and a customer ...
+You are a C# developer and a customer ... 
+
