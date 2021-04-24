@@ -11,7 +11,7 @@
 |:------------------------|--------------------:|----------------------:|
 | can-expect-late-month   |                 240 |                    75 |
 | open-young-friend-night |                   3 |                     0 |
-| say-will-likely-office  |                  25 |                    28 |
+| say-will-likely-office  |                  27 |                    32 |
 ## Diagrams
 
 ![Bild](./statistics/AddedlinesOfCode.png)
