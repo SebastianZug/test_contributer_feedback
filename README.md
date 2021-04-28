@@ -11,9 +11,9 @@ In this repository, different formats of feedback for teams of students are eval
 ## Text and Tables
 | author                  |   total_added_lines |   total_removed_lines |
 |:------------------------|--------------------:|----------------------:|
-| can-expect-late-month   |                 244 |                    76 |
+| can-expect-late-month   |                 246 |                    76 |
 | open-young-friend-night |                   3 |                     0 |
-| say-will-likely-office  |                  28 |                    33 |
+| say-will-likely-office  |                  30 |                    35 |
 ## Diagrams
 
 ![Bild](./statistics/AddedlinesOfCode.png)
