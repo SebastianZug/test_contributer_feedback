@@ -7,6 +7,8 @@ In this repository, different formats of feedback for teams of students are eval
 ![GitHub contributors](https://img.shields.io/github/contributors/SebastianZug/test_contributor_feedback) ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/SebastianZug/test_contributor_feedback)
 ![GitHub issues](https://img.shields.io/github/issues/SebastianZug/test_contributor_feedback) ![GitHub issues](https://img.shields.io/github/issues-raw/SebastianZug/test_contributor_feedback)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/SebastianZug/test_contributor_feedback) ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/SebastianZug/test_contributor_feedback)
+![GitHub Release Date](https://img.shields.io/github/release-date/sebastianzug/test_contributor_feedback?label=release%20published)
+
 
 ## Text and Tables
 | author                  |   total_added_lines |   total_removed_lines |
