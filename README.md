@@ -15,7 +15,7 @@ In this repository, different formats of feedback for teams of students are eval
 |:------------------------|--------------------:|----------------------:|
 | can-expect-late-month   |                 261 |                    87 |
 | open-young-friend-night |                   3 |                     0 |
-| say-will-likely-office  |                  51 |                    56 |
+| say-will-likely-office  |                  53 |                    58 |
 ## Diagrams
 
 ![Bild](./statistics/AddedlinesOfCode.png)
