@@ -55,7 +55,7 @@ if __name__ == "__main__":
     
     # Generate Figure 
     fig, ax = plt.subplots()
-    for user in users:
+    for index, user in users.iterrows():
         df = getDataToPlot(pdFileEdits, user.anonym_uuid)
         if len(df.lines_sum) == 1:
             df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', label=user.name, ax = ax, zorder=10)
