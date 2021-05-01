@@ -55,12 +55,12 @@ if __name__ == "__main__":
     
     # Generate Figure 
     fig, ax = plt.subplots()
-    for user in users.anonym_uuid.values:
-        df = getDataToPlot(pdFileEdits, user)
+    for user in users:
+        df = getDataToPlot(pdFileEdits, user.anonym_uuid)
         if len(df.lines_sum) == 1:
-            df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', ax = ax, zorder=10)
+            df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', label=user.name, ax = ax, zorder=10)
         else:
-            df.lines_sum.plot(drawstyle="steps-mid", linewidth = 1, ax = ax)
+            df.lines_sum.plot(drawstyle="steps-mid", linewidth = 1, label=user.name, ax = ax)
 
     ax.legend(users.anonym_uuid.values)
     ax.set_xlabel("Date")
