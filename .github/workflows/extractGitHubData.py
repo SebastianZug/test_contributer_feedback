@@ -56,14 +56,13 @@ if __name__ == "__main__":
     # Generate Figure 
     fig, ax = plt.subplots()
     for index, user in users.iterrows():
-        print(user)
         df = getDataToPlot(pdFileEdits, user.anonym_uuid)
         if len(df.lines_sum) == 1:
-            df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', label=user.name, ax = ax, zorder=10)
+            df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', ax = ax, zorder=10)
         else:
-            df.lines_sum.plot(drawstyle="steps-mid", linewidth = 1, label=user.name, ax = ax)
+            df.lines_sum.plot(drawstyle="steps-mid", linewidth = 1, ax = ax)
 
-    ax.legend(users.anonym_uuid.values)
+    ax.legend(users.name)
     ax.set_xlabel("Date")
     ax.set_ylabel('Added Lines of Code')
     print(type(pdFileEdits.commited_at.min()))
