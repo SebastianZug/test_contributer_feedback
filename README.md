@@ -13,7 +13,7 @@ In this repository, different formats of feedback for teams of students are eval
 ## Text and Tables
 | login          |   total_added_lines |   total_removed_lines |
 |:---------------|--------------------:|----------------------:|
-| actions-user   |                  60 |                    65 |
+| actions-user   |                  62 |                    67 |
 | andre-dietrich |                   3 |                     0 |
 | web-flow       |                 264 |                    88 |
 ## Diagrams
