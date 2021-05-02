@@ -36,6 +36,7 @@ if __name__ == "__main__":
     Version.generate_version_pandas_tables(repo = repo, data_root_dir=default_data_folder)
     
     users = Utility.get_users(default_data_folder)
+    print(users)
     pdCommits = Version.get_version(data_root_dir=default_data_folder)
     pdEdits = Version.get_version(data_root_dir=default_data_folder, filename=Version.VERSION_EDITS)
 
