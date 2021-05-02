@@ -11,11 +11,11 @@ In this repository, different formats of feedback for teams of students are eval
 
 
 ## Text and Tables
-| author                  |   total_added_lines |   total_removed_lines |
-|:------------------------|--------------------:|----------------------:|
-| can-expect-late-month   |                 261 |                    87 |
-| open-young-friend-night |                   3 |                     0 |
-| say-will-likely-office  |                  54 |                    59 |
+| login          |   total_added_lines |   total_removed_lines |
+|:---------------|--------------------:|----------------------:|
+| actions-user   |                  55 |                    60 |
+| andre-dietrich |                   3 |                     0 |
+| web-flow       |                 263 |                    88 |
 ## Diagrams
 
 ![Bild](./statistics/AddedlinesOfCode.png)
