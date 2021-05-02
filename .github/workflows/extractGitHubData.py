@@ -40,10 +40,11 @@ if __name__ == "__main__":
     pdEdits = Version.get_version(data_root_dir=default_data_folder, filename=Version.VERSION_EDITS)
 
     pdEdits = pdEdits.merge(pdCommits[['commit_sha', 'author', 'commited_at']], left_on='commit_sha', right_on='commit_sha')
+    pdEdits = pdEdits.merge(users[['anonym_uuid', 'login']], left_on='author', right_on='anonym_uuid')
     
     # Generate Table 
     pdFileEdits = pdEdits.groupby(['commit_sha']).first()
-    counts = pdFileEdits.groupby(['author']).agg({'total_added_lines': 'sum', 'total_removed_lines': 'sum'})
+    counts = pdFileEdits.groupby(['login']).agg({'total_added_lines': 'sum', 'total_removed_lines': 'sum'})
     print(counts.to_markdown())
     with open(readmefilename, 'r') as filehandle:
         filecontent = filehandle.read()
