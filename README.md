@@ -13,8 +13,8 @@ In this repository, different formats of feedback for teams of students are eval
 ## Text and Tables
 | login          |   total_added_lines |   total_removed_lines |
 |:---------------|--------------------:|----------------------:|
-| SebastianZug   |                 271 |                    94 |
-| actions-user   |                  64 |                    69 |
+| SebastianZug   |                 271 |                    97 |
+| actions-user   |                  66 |                    71 |
 | andre-dietrich |                   3 |                     0 |
 ## Diagrams
 
