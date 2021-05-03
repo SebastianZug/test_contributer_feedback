@@ -40,6 +40,7 @@ if __name__ == "__main__":
     pdCommits = Version.get_version(data_root_dir=default_data_folder)
     pdEdits = Version.get_version(data_root_dir=default_data_folder, filename=Version.VERSION_EDITS)
 
+    print(pdCommits.author.unique())
     pdEdits = pdEdits.merge(pdCommits[['commit_sha', 'author', 'commited_at']], left_on='commit_sha', right_on='commit_sha')
     pdEdits = pdEdits.merge(users[['anonym_uuid', 'login']], left_on='author', right_on='anonym_uuid')
     
