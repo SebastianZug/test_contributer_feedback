@@ -60,6 +60,7 @@ if __name__ == "__main__":
     for index, user in users.iterrows():
         print(user)
         df = getDataToPlot(pdFileEdits, user.anonym_uuid)
+        print(df)
         if len(df.lines_sum) == 1:
             df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', ax = ax, zorder=10)
         else:
