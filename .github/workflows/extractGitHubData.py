@@ -64,11 +64,11 @@ if __name__ == "__main__":
         print(df)
         if len(df.lines_sum):
             if len(df.lines_sum) == 1:
-                df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', ax = ax, zorder=10)
+                df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', label = user.login, ax = ax, zorder=10)
             else:
-                df.lines_sum.plot(drawstyle="steps-mid", linewidth = 1, ax = ax)
+                df.lines_sum.plot(drawstyle="steps-mid", label = user.login, linewidth = 1, ax = ax)
 
-    ax.legend(users.login)
+    ax.legend()
     ax.set_xlabel("Date")
     ax.set_ylabel('Added Lines of Code')
     print(type(pdFileEdits.commited_at.min()))
