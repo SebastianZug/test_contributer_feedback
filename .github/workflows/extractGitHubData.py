@@ -62,10 +62,11 @@ if __name__ == "__main__":
         print(user)
         df = getDataToPlot(pdFileEdits, user.anonym_uuid)
         print(df)
-        if len(df.lines_sum) == 1:
-            df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', ax = ax, zorder=10)
-        else:
-            df.lines_sum.plot(drawstyle="steps-mid", linewidth = 1, ax = ax)
+        if len(df.lines_sum):
+            if len(df.lines_sum) == 1:
+                df.reset_index().plot.scatter(x = 'day', y = 'lines_sum', ax = ax, zorder=10)
+            else:
+                df.lines_sum.plot(drawstyle="steps-mid", linewidth = 1, ax = ax)
 
     ax.legend(users.login)
     ax.set_xlabel("Date")
