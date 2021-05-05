@@ -68,7 +68,7 @@ if __name__ == "__main__":
             else:
                 df.lines_sum.plot(drawstyle="steps-mid", label = user.login, linewidth = 1, ax = ax)
 
-    ax.legend()
+    ax.legend(bbox_to_anchor=(0.5, 1.05))
     ax.set_xlabel("Date")
     ax.set_ylabel('Added Lines of Code')
     print(type(pdFileEdits.commited_at.min()))
