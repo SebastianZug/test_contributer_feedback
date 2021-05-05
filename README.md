@@ -22,4 +22,4 @@ In this repository, different formats of feedback for teams of students are eval
 
 # Task description
 
-You are a C# developer and a customer ..
+You are a C# developer and a customer ? In this role you will ...
