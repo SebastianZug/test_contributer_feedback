@@ -13,9 +13,10 @@ In this repository, different formats of feedback for teams of students are eval
 ## Text and Tables
 | login          |   total_added_lines |   total_removed_lines |
 |:---------------|--------------------:|----------------------:|
-| actions-user   |                 112 |                   117 |
+| SebastianZug   |                 279 |                   105 |
+| actions-user   |                 113 |                   118 |
 | andre-dietrich |                   3 |                     0 |
-| web-flow       |                 280 |                   106 |
+| galinarudollf  |                   1 |                     1 |
 ## Diagrams
 
 ![Bild](./statistics/AddedlinesOfCode.png)
