@@ -30,6 +30,7 @@ def getDataToPlot(df, author):
     return result
 
 if __name__ == "__main__":
+    print(git_repo_owner, git_repo_name)
     repo = Utility.get_repo(git_repo_owner, git_repo_name, github_token, default_data_folder)
     Version.clone_repository(repo=repo, data_root_dir=default_data_folder, github_token=github_token)
     Version.no_of_proceses = 8
