@@ -14,7 +14,7 @@ In this repository, different formats of feedback for teams of students are eval
 | login          |   total_added_lines |   total_removed_lines |
 |:---------------|--------------------:|----------------------:|
 | SebastianZug   |                 282 |                   105 |
-| actions-user   |                 186 |                   190 |
+| actions-user   |                 187 |                   191 |
 | andre-dietrich |                   3 |                     0 |
 | galinarudollf  |                   1 |                     1 |
 ## Diagrams
